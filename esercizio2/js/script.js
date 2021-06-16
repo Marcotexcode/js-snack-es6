@@ -6,6 +6,9 @@
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi sono sempre degli oggetti che contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
+// GENERARE UN NUMERO RANDOM AL POSTO DELLE PROPRIETA A 0 UTILIZZANDO ARROW FUNCTION (arrow vanno messi sempre in cima a tutto senno non funzionano)
+
+const numeriRandom = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 
 // CREARE UN ARRAY CON OGGETTI DI SQUADRE CON PROPRIETA: NOME, PUNTI, FALLI
@@ -21,16 +24,19 @@ const squadre = [
 
 ]
 
-// CREARE UN CICLO CHE MODIFICHI I VALORI: PUNTI, FALLI, DI OGNI OGGETTO
+// CREARE UN CICLO CHE MODIFICHI I VALORI: PUNTI, FALLI, DI OGNI OGGETTO E INSERISLI IN UN NUOVO ARRAY CON LA DESTRUTTURAZIONE
+
+const newProperty = [];
 
 for( let i = 0; i < squadre.length; i++) {
 
-    const {punti, peso} = squadre[i];
+    const {nome, punti, falli} = squadre[i];
 
-    console.log(squadre[i]);
+    newProperty.push({nome, punti:numeriRandom(1,100), falli:numeriRandom(1,100)});
         
 }
 
+console.log(newProperty);
 
 
 
@@ -43,9 +49,6 @@ for( let i = 0; i < squadre.length; i++) {
 
 
 
-// GENERARE UN NUMERO RANDOM AL POSTO DELLE PROPRIETA A 0 UTILIZZANDO ARROW FUNCTION
-
-const numeriRandom = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 
 

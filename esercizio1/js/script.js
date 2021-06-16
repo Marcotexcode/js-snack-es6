@@ -20,18 +20,19 @@ const bici = [
 
 
 // TROVARE LA BICI CON PESO MINORE
-let pesoMinore = bici[0].peso;
+let pesoMinore = bici[0];
 
 for (let i = 1; i < bici.length; i++) {
 
-    if(bici[i].peso < pesoMinore) {
-        pesoMinore = bici[i].peso;
+    if(bici[i].peso < pesoMinore.peso) {
+        pesoMinore = bici[i];
     }
 
 }
-
+console.log(pesoMinore);
 
 // USARE DESTRUCTURING
 
-const {nome, peso} = bici[i];
-console.log(nome, peso);
+const {nome,peso} = pesoMinore;
+console.log({nome, peso});
+

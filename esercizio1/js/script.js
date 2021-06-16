@@ -29,10 +29,26 @@ for (let i = 1; i < bici.length; i++) {
     }
 
 }
-console.log(pesoMinore);
+
+
 
 // USARE DESTRUCTURING
 
 const {nome,peso} = pesoMinore;
 console.log({nome, peso});
+
+
+
+
+// USARE TEMPLATE LITERAL
+
+document.getElementById('contenitore').innerHTML =  
+`
+La bici  meno pesante e: 
+<ul>
+    <li>Nome: ${nome}</li>
+    <li>Peso: ${peso}</li>
+</ul>
+
+`
 
